@@ -12,6 +12,7 @@ function VRScene() {
   return (
     <>
       <ambientLight intensity={0.5} />
+      <directionalLight color="red" position={[0, 0, 5]} />
       <spotLight position={[0, 5, 0]} angle={0.3} penumbra={1} intensity={2} castShadow shadow-mapSize={[4096, 4096]} />
       <Objects />
       <Lights />
