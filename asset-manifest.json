@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-Three-FiberVRTesting/static/css/main.ff9ba0a8.css",
+    "main.js": "/React-Three-FiberVRTesting/static/js/main.5f091e75.js",
+    "index.html": "/React-Three-FiberVRTesting/index.html",
+    "main.ff9ba0a8.css.map": "/React-Three-FiberVRTesting/static/css/main.ff9ba0a8.css.map",
+    "main.5f091e75.js.map": "/React-Three-FiberVRTesting/static/js/main.5f091e75.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff9ba0a8.css",
+    "static/js/main.5f091e75.js"
+  ]
+}
