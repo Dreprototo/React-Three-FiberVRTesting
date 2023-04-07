@@ -1,6 +1,5 @@
 {
-  "homepage": "https://dreprototo.github.io/React-Three-FiberVRTesting",
-  "name": "React-Three-FiberVRTesting",
+  "name": "react-fiber-vr",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
