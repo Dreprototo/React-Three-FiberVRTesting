@@ -24,7 +24,7 @@ function Objects() {
     }, [scene, groupRef]);
 
     function addItem() {
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 20; i++) {
             const geometry = geometries[Math.floor(Math.random() * geometries.length)];
             const material = new THREE.MeshStandardMaterial({
                 color: Math.random() * 0xffffff,
@@ -53,6 +53,7 @@ function Objects() {
 
     useFrame(() => {
         groupRef.current.rotation.y += 0.01;
+        // groupRef.current.rotation.x += 0.1;
     });
 
     return <group ref={groupRef} />;
