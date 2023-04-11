@@ -24,7 +24,7 @@ function Objects() {
     }, [scene, groupRef]);
 
     function addItem() {
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 50; i++) {
             const geometry = geometries[Math.floor(Math.random() * geometries.length)];
             const material = new THREE.MeshStandardMaterial({
                 color: Math.random() * 0xffffff,
@@ -34,9 +34,9 @@ function Objects() {
 
             const object = new THREE.Mesh(geometry, material);
 
-            object.position.x = Math.random() * 4 - 2;
+            object.position.x = Math.random() * 50 - 2;
             object.position.y = Math.random() * 2;
-            object.position.z = Math.random() * 4 - 2;
+            object.position.z = Math.random() * 50 - 2;
 
             object.rotation.x = Math.random() * 2 * Math.PI;
             object.rotation.y = Math.random() * 2 * Math.PI;
@@ -53,7 +53,9 @@ function Objects() {
 
     useFrame(() => {
         groupRef.current.rotation.y += 0.01;
-        // groupRef.current.rotation.x += 0.1;
+        // groupRef.current.rotation.x += 0.01;
+        // groupRef.current.rotation.z += 0.01;
+
     });
 
     return <group ref={groupRef} />;
