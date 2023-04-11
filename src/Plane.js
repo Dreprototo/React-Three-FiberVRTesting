@@ -10,7 +10,7 @@ function VRPlane(){
       }))
     return (
         <Plane ref={floorRef} args={[10, 10]} receiveShadow>
-        <meshStandardMaterial attach="material" color="#fff" />
+            <meshStandardMaterial attach="material" color="#f0dc07" roughness={0} metalness={1}/>
         </Plane>
     )
 }

@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <Canvas shadowMap
-        camera={{ position: [0, 1.6, 3], near: 0.1, far: 10 }}
+        camera={{ position: [0, 1.6, 3], near: 0.1, far: 1000 }}
         onCreated={({ gl }) => {
           gl.setClearColor('#ffffff');
           gl.shadowMap.enabled = true;
