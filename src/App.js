@@ -4,10 +4,12 @@ import { XR, VRButton, Controllers, Hands } from '@react-three/xr';
 import Objects from './Objects';
 import Lights from './Light';
 // import CustomControllers from './Controllers';
-import { Environment, Cloud } from '@react-three/drei';
+import { Environment, Cloud, OrbitControls} from '@react-three/drei';
 import "./style.css";
 import mushRoom from './textures/mushroom.hdr'
 import * as THREE from 'three';
+import VRPlane from './Plane';
+import { Physics } from '@react-three/cannon';
 
 function VRScene() {
   return (
@@ -17,6 +19,10 @@ function VRScene() {
       <spotLight position={[0, 5, 0]} angle={0.3} penumbra={1} intensity={2} castShadow shadow-mapSize={[4096, 4096]} />
       <Objects />
       <Lights />
+      <OrbitControls />
+      <Physics>
+        <VRPlane />
+      </Physics>
       {/* <CustomControllers /> */}
     </>
   );
