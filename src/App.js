@@ -34,22 +34,22 @@ function App() {
           gl.shadowMap.type = THREE.PCFSoftShadowMap;
         }}>
         <color attach="background" args={['#000000']} />
-        <Suspense fallback={null}>
-        <Cloud
-            opacity={1}
-            speed={1} // Rotation speed
-            width={10} // Width of the full cloud
-            depth={1.5} // Z-dir depth
-            segments={5} // Number of particles
-          />
-          <Environment background={true} files={mushRoom} resolution={4096}/>
-        
-          <XR>
-            <Controllers />
-            <Hands />
-            <VRScene />
-          </XR>
-        </Suspense>
+        <XR>
+          <Suspense fallback={null}>
+            <Cloud
+              opacity={1}
+              speed={1} // Rotation speed
+              width={10} // Width of the full cloud
+              depth={1.5} // Z-dir depth
+              segments={5} // Number of particles
+            />
+            <Environment background={true} files={mushRoom} resolution={4096}/>
+          </Suspense>
+          
+          <Controllers />
+          <Hands />
+          <VRScene />
+        </XR>
       </Canvas>
       <VRButton />
     </>
