@@ -36,6 +36,7 @@ function App() {
         <color attach="background" args={['#000000']} />
         <XR>
           <Suspense fallback={null}>
+            <Environment background={true} files={mushRoom}/>
             <Cloud
               opacity={1}
               speed={1} // Rotation speed
@@ -43,7 +44,6 @@ function App() {
               depth={1.5} // Z-dir depth
               segments={5} // Number of particles
             />
-            <Environment background={true} files={mushRoom} resolution={4096}/>
           </Suspense>
           
           <Controllers />
