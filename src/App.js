@@ -36,12 +36,13 @@ function App() {
         <color attach="background" args={['#000000']} />
         <Suspense fallback={null}>
           <Environment background={true} files={mushRoom} />
+        
+          <XR>
+            <Controllers />
+            <Hands />
+            <VRScene />
+          </XR>
         </Suspense>
-        <XR>
-          <Controllers />
-          <Hands />
-          <VRScene />
-        </XR>
       </Canvas>
       <VRButton />
     </>
