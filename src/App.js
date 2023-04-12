@@ -20,9 +20,9 @@ function VRScene() {
       <Objects />
       <Lights />
       <OrbitControls />
-      <Physics>
+      {/* <Physics>
         <VRPlane />
-      </Physics>
+      </Physics> */}
       {/* <CustomControllers /> */}
     </>
   );
@@ -52,7 +52,10 @@ function App() {
             />
           </Suspense>
           
-          <Controllers />
+          <Controllers /** Optional material props to pass to controllers' ray indicators */
+            rayMaterial={{ color: 'blue' }}
+            /** Whether to hide controllers' rays on blur. Default is `false` */
+            hideRaysOnBlur={false}/>
           <Hands />
           <VRScene />
         </XR>
